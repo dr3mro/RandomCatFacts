@@ -1,0 +1,65 @@
+#cat-img{
+    width: 300px;
+    max-height: 30vh;
+    box-shadow: 2px 5px 15px hsl(0, 0%, 16%);
+}
+
+#fact{
+    margin-top: 310px;
+    font-size: 2rem;
+    color: hsl(81, 96%, 53%);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h1{
+    position: fixed;              /* Fix it to the viewport */
+    top: 10px;                 /* 25px from the bottom */
+    align-items: center;                   /* Center horizontally */
+    font-size: 2rem;
+    font-weight: 700;
+    color: hsl(0, 82%, 45%);
+    text-align: center;
+}
+body{
+    background-color: hsl(0, 0%, 0%);
+    height: 100vh;
+}
+
+#fact-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid hsl(240, 100%, 41%);
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 5px 15px hsl(0, 0%, 16%);
+    height: auto;
+    max-width: 80%;
+}  
+
+#get-fact-btn{
+    position: fixed;              /* Fix it to the viewport */
+    bottom: 25px;                 /* 25px from the bottom */
+    left: 50%;                    /* Center horizontally */
+    transform: translateX(-50%);  /* Adjust for exact center */
+    background-color: hsl(0, 0%, 13%);
+    color: hsl(0, 0%, 100%);
+    border: 1px solid hsl(0, 0%, 100%);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;  
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 100vh;
+}
