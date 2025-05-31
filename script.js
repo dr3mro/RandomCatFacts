@@ -30,4 +30,4 @@ async function Load() {
   IMG.src = await getRandomCatImageUrl();
 }
 
-await Load();
+Load();
