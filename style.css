@@ -1,6 +1,5 @@
-/* Reset body margin and set background */
 body {
-    background-color: #f8f8f8;
+    background-color: #c5c5c5;
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -8,9 +7,9 @@ body {
 
 /* Fixed header */
 header {
-    background-color: hsla(226, 96%, 9%,70%);
-    color: #f4a568;
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    background-color: #a9ccee;
+    color: #2a5864;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
     position: fixed;
     top: 0;
     left: 0;
@@ -26,23 +25,33 @@ header {
 
 /* Fixed footer */
 footer {
-    background-color: hsla(226, 96%, 9%,70%);
-    color: #f8f8f8;
+    background-color: #a9ccee;
+    color: #2a5864;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     padding: 1rem;
     z-index: 1000;
-    height: 2rem;
+    height: 3rem;
+}
+
+footer p {
+    line-height: 0px;
 }
 
 /* Main content area */
 main {
-    background-color: #f8f8f8;
-    color: #ed0000;
+    background-color: #f0efef;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    color: #e67e22;
     border-radius: 15px;
-    margin: 3rem auto 3rem auto; /* Add space for fixed header and footer */
+    margin: 7rem auto 3rem auto;
+    height: 70vh;
     padding: 1rem;
     box-sizing: border-box;
     max-width: 800px;
@@ -59,11 +68,10 @@ main {
 
 /* Fact text */
 .container #fact-text {
-    color: hsl(0, 0%, 26%);
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+    color: #34495e;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
     font-size: 1.5rem;
     height: 20vh;
-    /* make text bottom aligned */
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -80,13 +88,12 @@ main {
     transition: transform 0.3s ease-in-out;
 }
 
-
 /* Cat image */
 .container #cat-img {
     max-height: 40vh;
     max-width: 90%;
     border-radius: 10px;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -95,9 +102,10 @@ main {
     transition: transform 0.3s ease-in-out;
 }
 
+/* Button */
 #get-fact-btn {
-    background-color: hsla(0, 100%, 46%, 70%);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+    background-color: #3498db;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
     color: #f8f8f8;
     border: none;
     padding: 1rem 2rem;
@@ -115,23 +123,17 @@ main {
     transition: background-color 0.3s ease-in-out;
 }
 
-
-
 #get-fact-btn:hover {
-    background-color: hsla(132, 100%, 15%, 0.8);
+    background-color: #2980b9;
 }
 
-#get-fact-btn:not(:hover) {
-    background-color: hsla(132, 100%, 15%,70%);
-}
 #get-fact-btn:active {
-    background-color: hsla(132, 100%, 15%,90%);
+    background-color: #1c5985;
     transform: translateY(2px);
 }
 
 @media screen and (max-width: 768px) {
-.container #fact-text {
-    font-size: 1rem;
-}
-    
+    .container #fact-text {
+        font-size: 1rem;
+    }
 }
