@@ -70,6 +70,17 @@ main {
     margin-bottom: 2rem;
 }
 
+.container #fact-text:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.container #fact-text:not(:hover) {
+    transform: scale(1.0);
+    transition: transform 0.3s ease-in-out;
+}
+
+
 /* Cat image */
 .container #cat-img {
     max-height: 40vh;
@@ -86,6 +97,7 @@ main {
 
 #get-fact-btn {
     background-color: hsla(0, 100%, 46%, 70%);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
     color: #f8f8f8;
     border: none;
     padding: 1rem 2rem;
@@ -104,12 +116,16 @@ main {
 }
 
 
+
 #get-fact-btn:hover {
-    background-color: hsla(0, 100%, 46%,80%);
+    background-color: hsla(132, 100%, 15%, 0.8);
 }
 
+#get-fact-btn:not(:hover) {
+    background-color: hsla(132, 100%, 15%,70%);
+}
 #get-fact-btn:active {
-    background-color: hsla(0, 100%, 46%,90%);
+    background-color: hsla(132, 100%, 15%,90%);
     transform: translateY(2px);
 }
 
