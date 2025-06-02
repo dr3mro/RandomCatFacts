@@ -60,6 +60,7 @@ main {
 /* Fact text */
 .container #fact-text {
     color: hsl(0, 0%, 26%);
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
     font-size: 1.5rem;
     height: 20vh;
     /* make text bottom aligned */
@@ -71,7 +72,8 @@ main {
 
 /* Cat image */
 .container #cat-img {
-    height: 40vh;
+    max-height: 40vh;
+    max-width: 90%;
     border-radius: 10px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out;
