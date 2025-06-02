@@ -1,0 +1,21 @@
+{
+  "name": "Cat Facts",
+  "short_name": "CatFacts",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4A90E2",
+  "description": "A fun cat facts app with random cat images!",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
