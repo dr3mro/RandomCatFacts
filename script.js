@@ -4,6 +4,8 @@ const IMG = document.getElementById("cat-img");
 const GETFACTBTN = document.getElementById("get-fact-btn");
 
 GETFACTBTN.addEventListener("click", async function () {
+  clearInterval(main_loop);
+  main_loop = setInterval(Load, 10000);
   await Load();
 });
 
@@ -69,4 +71,4 @@ async function Load() {
 
 Load();
 
-setInterval(Load, 10000);
+let main_loop = setInterval(Load, 10000);
