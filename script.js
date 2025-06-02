@@ -26,6 +26,7 @@ async function getRandomCatImageUrl() {
 }
 
 async function Load() {
+  this.blur();
   FACT.textContent = await getFact().then((res) => res.fact);
   IMG.src = await getRandomCatImageUrl();
 }
