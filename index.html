@@ -6,6 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cat Facts</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#4A90E2">
+  <!-- iOS Web App Meta Tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Cat Facts">
+
+  <!-- iOS App Icons -->
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+
 </head>
 
 <body>
@@ -30,8 +40,15 @@
     <p>Amr Osman <a href="mailto:dr3mro@gmail.com">dr3mro@gmail.com</a></p>
   </footer>
 
-  <script type="module" src="script.js"></script>
 
+  <script type="module" src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(reg => console.log('SW registered!', reg))
+        .catch(err => console.error('SW registration failed:', err));
+    }
+  </script>
 </body>
 
 </html>
