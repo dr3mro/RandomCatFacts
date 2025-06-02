@@ -32,3 +32,5 @@ async function Load() {
   IMG.src = await getRandomCatImageUrl();
 }
 Load();
+
+setInterval(Load, 10000);
