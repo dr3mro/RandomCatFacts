@@ -9,7 +9,8 @@ body {
 /* Fixed header */
 header {
     background-color: hsla(226, 96%, 9%,70%);
-    color: #f8f8f8;
+    color: #f4a568;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     position: fixed;
     top: 0;
     left: 0;
@@ -20,6 +21,7 @@ header {
     justify-content: center;
     display: flex;
     flex-direction: column;
+    height: 3rem;
 }
 
 /* Fixed footer */
@@ -32,6 +34,7 @@ footer {
     width: 100%;
     padding: 1rem;
     z-index: 1000;
+    height: 2rem;
 }
 
 /* Main content area */
@@ -39,7 +42,7 @@ main {
     background-color: #f8f8f8;
     color: #ed0000;
     border-radius: 15px;
-    margin: 6rem auto 6rem auto; /* Add space for fixed header and footer */
+    margin: 3rem auto 3rem auto; /* Add space for fixed header and footer */
     padding: 1rem;
     box-sizing: border-box;
     max-width: 800px;
