@@ -188,3 +188,19 @@ main {
         padding: 0.8rem 1.5rem;
     }
 }
+
+
+#fact-text, #cat-img {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#fact-text.fade-out, #cat-img.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#fact-text.fade-in, #cat-img.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}

@@ -6,6 +6,7 @@ const GETFACTBTN = document.getElementById("get-fact-btn");
 GETFACTBTN.addEventListener("click", async function () {
   await Load();
 });
+
 async function getFact() {
   return await fetch("https://catfact.ninja/fact")
     .then((res) => res.json())
@@ -27,10 +28,45 @@ async function getRandomCatImageUrl() {
   return await images[getRandomInt(MAX_CAT_IMAGES)].url;
 }
 
-async function Load() {
-  FACT.textContent = await getFact().then((res) => res.fact);
-  IMG.src = await getRandomCatImageUrl();
+function fadeOut(element) {
+  return new Promise((resolve) => {
+    element.classList.add("fade-out");
+    element.classList.remove("fade-in");
+    setTimeout(resolve, 200); // Wait for fade-out to complete
+  });
 }
+
+function fadeIn(element) {
+  return new Promise((resolve) => {
+    element.classList.remove("fade-out");
+    element.classList.add("fade-in");
+    setTimeout(resolve, 200);
+  });
+}
+
+async function Load() {
+  // Fade out both elements
+  await Promise.all([fadeOut(FACT), fadeOut(IMG)]);
+
+  // Load new content
+  const [factData, imageUrl] = await Promise.all([
+    getFact(),
+    getRandomCatImageUrl(),
+  ]);
+
+  // Update content
+  FACT.textContent = factData.fact;
+  IMG.src = imageUrl;
+
+  // Wait for image to load before fading in
+  IMG.onload = () => {
+    fadeIn(IMG);
+  };
+
+  // Fade in the fact text immediately
+  fadeIn(FACT);
+}
+
 Load();
 
 setInterval(Load, 10000);
