@@ -51,15 +51,14 @@
 
   <!-- Main JS Module -->
   <script type="module" src="script.js"></script>
-
-  <!-- Service Worker
+  <!-- Service Worker Registration -->
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js')  // relative path
         .then(reg => console.log('SW registered!', reg))
         .catch(err => console.error('SW registration failed:', err));
     }
-  </script> -->
+  </script>
 </body>
 
 </html>
