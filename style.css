@@ -21,6 +21,7 @@ header {
     display: flex;
     flex-direction: column;
     height: 3rem;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.75);
 }
 
 /* Fixed footer */
@@ -38,6 +39,7 @@ footer {
     padding: 1rem;
     z-index: 1000;
     height: 3rem;
+    box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.75);
 }
 
 footer p {
