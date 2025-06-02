@@ -76,6 +76,7 @@ main {
     height: 20vh;
     display: flex;
     align-items: flex-start;
+    text-align: center;
     justify-content: center;
     margin-bottom: 2rem;
 }
