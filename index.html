@@ -5,48 +5,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cat Facts</title>
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 
   <!-- iOS Web App Meta Tags -->
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="transparent">
-  <meta name="theme-color" content="#a9ccee"> <!-- Your app color -->
-
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#a9ccee">
   <meta name="apple-mobile-web-app-title" content="Cat Facts">
-  <link rel="manifest" href="/manifest.json">
+
+  <!-- Manifest (relative path recommended unless you’re sure about root) -->
+  <link rel="manifest" href="manifest.json">
 
   <!-- iOS App Icons -->
   <link rel="apple-touch-icon" href="icons/icon-192.png">
-  <meta name="apple-mobile-web-app-startup-image" content="/RandomCatFacts/">
+
+  <!-- ❌ Startup image must be a valid image path, not a folder -->
+  <!-- Remove or replace with a proper splash image -->
+  <!-- <meta name="apple-mobile-web-app-startup-image" content="/RandomCatFacts/"> -->
 </head>
 
 <body>
   <header>
     <h1>Random Cat Facts</h1>
   </header>
+
   <main>
     <div class="container">
       <p id="fact-text"></p>
-
       <img id="cat-img" class="img-responsive" src="" alt="A random cat image">
-
     </div>
-    <button id="get-fact-btn" click="Load()">more ...</button>
 
+    <!-- Button: JS will attach event listener -->
+    <button id="get-fact-btn">more ...</button>
   </main>
 
-
-  </div>
   <footer>
-    <p>&copy; 2025 Random Cat Facts. All rights reserved. </p>
+    <p>&copy; 2025 Random Cat Facts. All rights reserved.</p>
     <p>Amr Osman <a href="mailto:dr3mro@gmail.com">dr3mro@gmail.com</a></p>
   </footer>
 
-
+  <!-- Main JS Module -->
   <script type="module" src="script.js"></script>
+
+  <!-- Service Worker -->
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js')
+      navigator.serviceWorker.register('service-worker.js')  // relative path
         .then(reg => console.log('SW registered!', reg))
         .catch(err => console.error('SW registration failed:', err));
     }
