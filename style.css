@@ -40,7 +40,8 @@ footer {
     background-color: #a9ccee;
     color: #2a5864;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction:column;
     align-items: center;
     justify-content: center;
     position: fixed;
