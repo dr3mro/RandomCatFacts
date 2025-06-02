@@ -4,7 +4,6 @@ const IMG = document.getElementById("cat-img");
 const GETFACTBTN = document.getElementById("get-fact-btn");
 
 GETFACTBTN.addEventListener("click", async function () {
-  this.blur();
   await Load();
 });
 async function getFact() {
