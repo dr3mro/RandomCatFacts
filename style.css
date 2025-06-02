@@ -126,6 +126,7 @@ main {
     z-index: 1001;
     transition: btn_animation 0.5s ease-in-out;
     animation: btn_animation 2s infinite alternate-reverse;
+    user-select: none;
 }
 
 #get-fact-btn:hover {
