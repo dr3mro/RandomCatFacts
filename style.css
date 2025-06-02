@@ -66,6 +66,8 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
+    max-height: 80%;
+    overflow:scroll;
 }
 
 /* Fact text */
@@ -115,7 +117,7 @@ main {
     font-size: 1.2rem;
     cursor: pointer;
     position: fixed;
-    bottom: 10%;
+    bottom: 20%;
     left: 0;
     right: 0;
     margin: 0 auto;
