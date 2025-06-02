@@ -69,9 +69,11 @@ footer p {
 /* Main content area */
 main {
     display: block; 
-    margin: 2rem auto;
-    width: 80vw;
+    width: 80vh;
+    height: 80vh;
+    margin: 4rem auto;
     background-color: #f0efef;
+    padding: 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
     color: #e67e22;
     border-radius: 15px;
