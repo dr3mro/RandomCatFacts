@@ -121,6 +121,7 @@ main {
     max-width: 90%;
     box-sizing: border-box;
     transition: background-color 0.3s ease-in-out;
+    z-index: 1001;
 }
 
 #get-fact-btn:hover {
