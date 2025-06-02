@@ -3,7 +3,10 @@ const FACT = document.getElementById("fact-text");
 const IMG = document.getElementById("cat-img");
 const GETFACTBTN = document.getElementById("get-fact-btn");
 
-GETFACTBTN.addEventListener("click", Load);
+GETFACTBTN.addEventListener("click", async function () {
+  this.blur();
+  await Load();
+});
 async function getFact() {
   return await fetch("https://catfact.ninja/fact")
     .then((res) => res.json())
@@ -26,9 +29,7 @@ async function getRandomCatImageUrl() {
 }
 
 async function Load() {
-  this.blur();
   FACT.textContent = await getFact().then((res) => res.fact);
   IMG.src = await getRandomCatImageUrl();
 }
-
 Load();
