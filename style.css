@@ -12,7 +12,7 @@ body {
     padding-top: var(--header-height);
     padding-bottom: var(--footer-height);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-        left: 0;
+    left: 0;
     right: 0;
 }
 
@@ -73,15 +73,33 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    left: 0;
-    right: 0;
+    margin: 5rem 5rem;
+    max-height: 70vh;
 }
 
+@media screen and (max-width: 768px) {
+    main {
+        margin: 2rem;
+    }
+    
+}
 
+@media screen and (max-width: 600px) {
+    main {
+        margin: 2rem;
+    }
+
+}
+@media screen and (max-width: 480px) {
+    main {
+        margin: 2rem;
+    }
+    
+}
 /* Container styles */
 .container {
     margin: 4rem auto;
-    width: 100vw;
+    width: 100%;
 }
 
 /* Fact text */
