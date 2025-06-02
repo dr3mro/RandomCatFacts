@@ -1,56 +1,116 @@
-
-.img-responsive {
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center;
-    max-width: 80vw;
-    max-height: 40vh;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
-    align-items: center;
+/* Reset body margin and set background */
+body {
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#get-fact-btn{
-    background-color: #99424299;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
-    color: #fff;
-    border: none;
-    padding: 8px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+/* Fixed header */
+header {
+    background-color: hsla(226, 96%, 9%,70%);
+    color: #f8f8f8;
     position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    align-items: center;
-    box-sizing: border-box;
-}
-#fact{
-    font-size: 1.5rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    color: #333;
-    text-align: center;
-    margin: 1%;
-    margin-bottom: 10%;
-    padding: 2%;
-    line-height: 1.5;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-
-}
-#fact-container{
-    height: 80vh;
-    width: 100vw;
-    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    z-index: 1000;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
+}
+
+/* Fixed footer */
+footer {
+    background-color: hsla(226, 96%, 9%,70%);
+    color: #f8f8f8;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+/* Main content area */
+main {
+    background-color: #f8f8f8;
+    color: #ed0000;
+    border-radius: 15px;
+    margin: 6rem auto 6rem auto; /* Add space for fixed header and footer */
+    padding: 1rem;
+    box-sizing: border-box;
+    max-width: 800px;
+}
+
+/* Container styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Fact text */
+.container #fact-text {
+    color: hsl(0, 0%, 26%);
+    font-size: 1.5rem;
+    height: 20vh;
+    /* make text bottom aligned */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+/* Cat image */
+.container #cat-img {
+    height: 40vh;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.container #cat-img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+#get-fact-btn {
+    background-color: hsla(0, 100%, 46%, 70%);
+    color: #f8f8f8;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: fixed;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: fit-content;
+    max-width: 90%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+#get-fact-btn:hover {
+    background-color: hsla(0, 100%, 46%,80%);
+}
+
+#get-fact-btn:active {
+    background-color: hsla(0, 100%, 46%,90%);
+    transform: translateY(2px);
+}
+
+@media screen and (max-width: 768px) {
+.container #fact-text {
+    font-size: 1rem;
+}
+    
 }

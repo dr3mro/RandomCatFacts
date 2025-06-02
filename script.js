@@ -1,5 +1,5 @@
 const MAX_CAT_IMAGES = 10;
-const FACT = document.getElementById("fact");
+const FACT = document.getElementById("fact-text");
 const IMG = document.getElementById("cat-img");
 const GETFACTBTN = document.getElementById("get-fact-btn");
 
