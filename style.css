@@ -1,5 +1,4 @@
 
-
 .img-responsive {
     box-sizing: border-box;
     align-items: center;
@@ -30,13 +29,14 @@
     box-sizing: border-box;
 }
 #fact{
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     color: #333;
     text-align: center;
-    margin: 0;
-    padding: 0;
+    margin: 1%;
+    margin-bottom: 10%;
+    padding: 2%;
     line-height: 1.5;
     align-items: center;
     justify-content: center;
