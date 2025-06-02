@@ -4,8 +4,8 @@
   "start_url": ".",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#4A90E2",
-  "theme_color": "#4A90E2",
+  "background_color": "#a9ccee",
+  "theme_color": "#a9ccee",
   "description": "A fun cat facts app with random cat images!",
   "icons": [
     {
