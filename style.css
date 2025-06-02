@@ -8,10 +8,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
 /* Fixed header */
@@ -40,7 +38,6 @@ footer {
     background-color: #a9ccee;
     color: #2a5864;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -66,8 +63,9 @@ main {
     margin-top: calc(var(--header-height) + 1rem);
     margin-bottom: calc(var(--footer-height) + 1rem);
     padding: 1rem;
-    max-width: 800px;
     width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
